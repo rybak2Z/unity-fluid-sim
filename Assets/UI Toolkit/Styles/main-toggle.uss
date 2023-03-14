@@ -1,0 +1,29 @@
+.standard-toggle {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 255);
+    flex-direction: row-reverse;
+    align-items: stretch;
+    -unity-text-align: middle-left;
+    justify-content: flex-end;
+}
+
+.standard-toggle > VisualElement {
+    opacity: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-left: 0;
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+    -unity-text-align: middle-left;
+    justify-content: flex-start;
+    align-items: stretch;
+}

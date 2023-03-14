@@ -1,0 +1,3 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:Slider picking-mode="Ignore" label="Arrow Scale" value="42" high-value="100" show-input-field="true" name="ArrowScale" />
+</ui:UXML>

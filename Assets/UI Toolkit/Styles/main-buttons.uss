@@ -1,0 +1,40 @@
+Button {
+    width: 200px;
+    height: 50px;
+    font-size: 28px;
+    color: rgba(0, 0, 0, 255);
+    background-color: rgba(236, 236, 236, 255);
+    border-left-color: rgba(255, 255, 255, 255);
+    border-right-color: rgba(255, 255, 255, 255);
+    border-top-color: rgba(255, 255, 255, 255);
+    border-bottom-color: rgba(255, 255, 255, 255);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+Button:hover {
+    background-color: rgba(192, 192, 192, 255);
+}
+
+Button:active {
+    color: rgba(233, 233, 233, 255);
+    background-color: rgba(0, 0, 0, 255);
+    border-left-color: rgba(224, 224, 224, 255);
+    border-right-color: rgba(224, 224, 224, 255);
+    border-top-color: rgba(224, 224, 224, 255);
+    border-bottom-color: rgba(224, 224, 224, 255);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+Button:hover:disabled {
+    background-color: rgba(236, 236, 236, 255);
+}
