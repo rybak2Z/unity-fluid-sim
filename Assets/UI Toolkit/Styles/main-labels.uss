@@ -1,0 +1,4 @@
+Label {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 255);
+}

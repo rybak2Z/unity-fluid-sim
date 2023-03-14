@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/sliders.uss?fileID=7433441132597879392&amp;guid=46b5bcaebfd44834297b9ebc1cc6dcf9&amp;type=3#sliders" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/main-toggle.uss?fileID=7433441132597879392&amp;guid=8ae9c5272311b404b96f163f2df1804e&amp;type=3#main-toggle" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/main-settings-group.uss?fileID=7433441132597879392&amp;guid=d60470b02632bcc438011aebc7c64c58&amp;type=3#main-settings-group" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/main-radio-buttons.uss?fileID=7433441132597879392&amp;guid=8955908fb4dd4604fae7e83b98bc7c02&amp;type=3#main-radio-buttons" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/main-labels.uss?fileID=7433441132597879392&amp;guid=82bfb847162347148aef8d8b49c9922d&amp;type=3#main-labels" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/main-buttons.uss?fileID=7433441132597879392&amp;guid=352c14c879f852d499d141b41a5aa961&amp;type=3#main-buttons" />
+    <Style src="project://database/Assets/UI%20Toolkit/Styles/main-can-be-deactivated.uss?fileID=7433441132597879392&amp;guid=2144edd172e0e814e8500049dd1d0d4e&amp;type=3#main-can-be-deactivated" />
+    <ui:VisualElement name="PerformanceStats" style="height: 10%; align-items: stretch; padding-bottom: 0; margin-bottom: 30px;">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="FPS" />
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="StepsPerSecond" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Settings" style="flex-direction: row; justify-content: space-between;">
+        <ui:VisualElement name="SettingsLeft" class="settings-group" style="top: auto; right: auto; height: auto; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 20%; justify-content: flex-start;">
+            <ui:SliderInt picking-mode="Ignore" label="Grid Size" value="15" high-value="100" name="GridSize" show-input-field="true" low-value="1" page-size="0" />
+            <ui:VisualElement name="ArrowSection" style="height: auto; margin-bottom: 0;">
+                <ui:Toggle label="Draw Velocity Arrows" value="false" name="DrawVelocityArrows" class="standard-toggle" style="flex-shrink: 0; flex-grow: 0; overflow: hidden; justify-content: flex-end;" />
+                <ui:Toggle label="Normalize Arrows" name="NormalizeArrows" value="false" class="standard-toggle" />
+                <ui:Slider picking-mode="Ignore" label="Arrow Scale" value="1" high-value="2" name="ArrowScale" show-input-field="true" low-value="0.01" />
+            </ui:VisualElement>
+            <ui:Slider picking-mode="Ignore" label="Diffusion Factor" value="1" high-value="10" name="DiffusionFactor" show-input-field="true" low-value="0.01" />
+            <ui:VisualElement name="ComputationSection">
+                <ui:SliderInt picking-mode="Ignore" label="Minimum Steps Per Second" value="20" high-value="100" name="MinimumStepsPerSecond" show-input-field="true" low-value="0" style="flex-wrap: nowrap;" />
+                <ui:SliderInt picking-mode="Ignore" label="Gauss Seidel Iterations" value="10" high-value="30" show-input-field="true" name="GaussSeidelIterations" low-value="1" />
+                <ui:Slider picking-mode="Ignore" label="CFL" value="1" high-value="5" name="CFL" show-input-field="true" low-value="0.01" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="SettingsRight" class="settings-group" style="width: 20%; right: auto; left: auto; top: auto; height: auto; -unity-text-align: upper-left;">
+            <ui:RadioButtonGroup label="Cursor Mode" value="-1" name="CursorMode" style="flex-direction: column; -unity-text-align: upper-right;">
+                <ui:RadioButton label="Draw Source" name="DrawSource" value="true" style="flex-direction: row; justify-content: flex-end;" />
+                <ui:RadioButton label="Delete" name="Delete" style="justify-content: flex-end;" />
+                <ui:RadioButton label="Move" value="false" name="Move" focusable="true" style="justify-content: flex-end;" />
+            </ui:RadioButtonGroup>
+            <ui:Slider picking-mode="Ignore" label="Cursor Size" value="1" high-value="3" show-input-field="true" name="CursorSize" low-value="0.01" />
+            <ui:Slider picking-mode="Ignore" label="Cursor Force" value="1" high-value="5" name="CursorForce" show-input-field="true" low-value="0.01" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Controls" style="top: auto; left: auto; bottom: auto; align-items: center; flex-direction: row; justify-content: center; padding-top: 72px;">
+        <ui:Button display-tooltip-when-elided="true" name="ResetGrid" text="Reset Grid" />
+        <ui:Button display-tooltip-when-elided="true" name="Start" text="Start/Pause" style="background-image: none; margin-top: 4px; margin-bottom: 4px; padding-top: 12px; padding-bottom: 12px;" />
+        <ui:Button display-tooltip-when-elided="true" name="Stop" enable-rich-text="true" text="Stop" />
+    </ui:VisualElement>
+</ui:UXML>
